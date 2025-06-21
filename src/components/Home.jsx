@@ -114,20 +114,6 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Floating Stats */}
-          {/* <div className="absolute -top-4 -right-4 bg-slate-800 border border-slate-700 rounded-2xl p-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-blue-400">3+</div>
-              <div className="text-sm text-gray-400">Years Learning</div>
-            </div>
-          </div> */}
-{/* 
-          <div className="absolute -bottom-4 -left-4 bg-slate-800 border border-slate-700 rounded-2xl p-4">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-purple-400">5+</div>
-              <div className="text-sm text-gray-400">Projects Built</div>
-            </div>
-          </div> */}
         </div>
       </div>
 
