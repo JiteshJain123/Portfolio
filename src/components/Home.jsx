@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
-const Hero = () => {
+const Home = () => {
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -141,4 +141,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

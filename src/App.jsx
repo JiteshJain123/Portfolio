@@ -1,5 +1,5 @@
 import React from "react";
-import Hero from "./components/Hero";
+import Home from "./components/Home";
 import About from "./components/About";
 import Experience from "./components/Experience";
 import Header from "./components/Header";
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="bg-slate-900 text-white scroll-smooth overflow-x-hidden">
       <Header />
-      <Hero />
+      <Home />
       <About />
       <Skills />
       <Projects />
