@@ -11,7 +11,6 @@ A **modern and responsive portfolio website** built using **React**, **Vite**, a
 - ⚛️ React.js  
 - ⚡ Vite  
 - 🎨 Tailwind CSS  
-- 🎥 GSAP + ScrollTrigger + Locomotive Scroll (for smooth animations)  
 - 📦 Lucide Icons / Remix Icons  
 
 ---
