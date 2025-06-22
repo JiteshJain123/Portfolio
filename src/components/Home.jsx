@@ -91,7 +91,6 @@ const Home = () => {
               <Linkedin size={24} />
             </a>
 
-            {/* Download Resume Button */}
             <a
               href="/Resume_Jitesh.pdf"
               download
@@ -103,17 +102,15 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Right Side - Profile Card */}
+        {/* Right Side - Image or GIF */}
         <div className="relative">
-          <div className="relative w-80 h-80 mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl rotate-6 opacity-20"></div>
-            <div className="relative bg-slate-800 rounded-3xl p-8 border border-slate-700">
-              <div className="w-full h-64 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center">
-                <div className="text-6xl">👨‍💻</div>
-              </div>
-            </div>
+          <div className="relative w-80 h-80 mx-auto overflow-hidden rounded-3xl bg-slate-800 p-6 border border-slate-700 shadow-md">
+            <img
+              src="/home-dev.png" // Place the image in public folder or adjust if using from assets
+              alt="Developer working on laptop"
+              className="w-full h-full object-contain"
+            />
           </div>
-
         </div>
       </div>
 
