@@ -80,7 +80,7 @@ const About = () => {
                   </div>
                   <div className="flex items-center gap-2">
                     <Calendar size={16} />
-                    <span>2022–2027 </span>
+                    <span>2023–2027 </span>
                   </div>
                 </div>
               </div>
