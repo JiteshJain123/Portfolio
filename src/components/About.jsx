@@ -42,14 +42,11 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">
-                Frontend Developer & Creative Thinker
+                Full-Stack Web Developer & Creative Thinker
               </h3>
 
               <p className="text-lg text-gray-300 leading-relaxed">
-                I'm a frontend developer passionate about building seamless and
-                beautiful user experiences. Currently pursuing my B.Tech in EEE
-                at IIIT Gwalior, I blend my love for design, logic, and
-                storytelling to create meaningful digital products.
+               I'm a passionate Full Stack Developer who loves turning ideas into impactful digital experiences. Currently pursuing my B.Tech in Electrical and Electronics Engineering at IIIT Gwalior, I specialize in building sleek frontends and powerful backends using modern web technologies. I enjoy blending design, logic, and real-world problem-solving to create scalable and user-focused web applications.
               </p>
 
               <p className="text-lg text-gray-300 leading-relaxed">

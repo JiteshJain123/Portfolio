@@ -1,132 +1,135 @@
-import React, { useState } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import React, { useState } from "react";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const filters = ["All","Backend","React", "Animation", "Clone"];
 
   const projects = [
     {
+      title: "Trendify",
+      description:
+        "A backend-driven trending content API using Node.js, Express, EJS and MongoDB with real-time data scraping and RESTful endpoints.",
+      image:
+        "https://plus.unsplash.com/premium_photo-1661877737564-3dfd7282efcb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y29kaW5nfGVufDB8fDB8fHww",
+      technologies: ["Node.js", "Express.js", "MongoDB", "EJS", "REST API"],
+      category: "Backend",
+      demoLink: "https://trendify-ujjw.onrender.com/",
+      githubLink: "https://github.com/JiteshJain123/Trendify",
+      featured: true,
+    },
+    {
       title: "ViewVault",
-      description: "A category-based secure content manager built with React and Redux for organized digital asset management.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500",
+      description:
+        "A category-based secure content manager built with React and Redux for organized digital asset management.",
+      image:
+        "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y29kaW5nfGVufDB8fDB8fHww",
       technologies: ["React", "Redux", "JavaScript", "CSS"],
       category: "React",
-      demoLink: "https://view-vault-beige.vercel.app/",
+      demoLink: "https://view-vault-beige.vercel.app",
       githubLink: "https://github.com/JiteshJain123/ViewVault",
-      featured: true
+      featured: true,
     },
     {
       title: "Obys Agency Clone",
-      description: "A creative, scroll-animated web clone using GSAP and Locomotive Scroll with smooth interactions.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500",
-      technologies: ["HTML5", "CSS3","JavaScript", "GSAP", "Locomotive"],
+      description:
+        "A creative, scroll-animated web clone using GSAP and Locomotive Scroll with smooth interactions.",
+      image:
+        "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
+      technologies: ["HTML5", "CSS3", "JavaScript", "GSAP"],
       category: "Animation",
       demoLink: "https://jiteshjain123.github.io/Obys-agency/",
       githubLink: "https://github.com/JiteshJain123/Obys-agency",
-      featured: true
+      featured: true,
     },
     {
       title: "Myntra Clone",
-      description: "A pixel-perfect static replica of Myntra's homepage showcasing modern e-commerce design patterns.",
-      image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?w=500",
+      description:
+        "A pixel-perfect static replica of Myntra's homepage showcasing modern e‑commerce design patterns.",
+      image:
+        "https://images.unsplash.com/photo-1562813733-b31f71025d54?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNvZGluZ3xlbnwwfHwwfHx8MA%3D%3D",
       technologies: ["HTML5", "CSS3"],
       category: "Clone",
       demoLink: "https://jiteshjain123.github.io/Myntra_Clone/",
       githubLink: "https://github.com/JiteshJain123/Myntra_Clone",
-      featured: false
-    }
+      featured: false,
+    },
   ];
 
-  const filters = ['All', 'React', 'Animation', 'Clone'];
-
-  const filteredProjects = activeFilter === 'All'
-    ? projects
-    : projects.filter(p => p.category === activeFilter);
+  const filteredProjects =
+    selectedCategory === "All"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-900">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">Projects</span>
-          </h2>
-          <p className="text-gray-400 text-lg">Check out my latest technical works</p>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mt-4 mx-auto rounded-full" />
-        </div>
+    <section id="projects" className="py-16 px-4 bg-slate-900 text-white">
+      <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
 
-        {/* Filter */}
-        <div className="flex justify-center mb-10 gap-4 flex-wrap">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full border transition-all duration-300 ${
-                activeFilter === filter
-                  ? "bg-blue-500 text-white border-blue-500 shadow-lg"
-                  : "text-gray-300 border-gray-600 hover:bg-slate-700"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
+      {/* Filter Buttons */}
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
+        {filters.map((filter) => (
+          <button
+            key={filter}
+            onClick={() => setSelectedCategory(filter)}
+            className={`px-4 py-2 rounded-full border transition duration-300 ${
+              selectedCategory === filter
+                ? "bg-white text-black"
+                : "bg-transparent border-white text-white hover:bg-white hover:text-black"
+            }`}
+          >
+            {filter}
+          </button>
+        ))}
+      </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project, i) => (
-            <div
-              key={i}
-              className="relative group bg-slate-800/40 rounded-2xl border border-slate-700 overflow-hidden hover:scale-[1.03] transition-all duration-500 shadow-lg"
-            >
-              {/* Featured Badge */}
-              {project.featured && (
-                <div className="absolute top-3 left-3 z-10 px-3 py-1 bg-orange-500 text-black text-xs font-semibold rounded-full">
-                  Featured
-                </div>
-              )}
-
-              {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-white/10 hover:bg-blue-600 text-white flex items-center justify-center transition-all"
+      {/* Project Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+        {filteredProjects.map((project, index) => (
+          <div
+            key={index}
+            className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group"
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className="w-full h-48 object-cover"
+            />
+            {/* Hover Overlay */}
+            <div className="absolute inset-0 bg-black bg-opacity-70 opacity-0 group-hover:opacity-100 flex items-center justify-center gap-6 transition duration-300">
+              <a
+                href={project.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-2xl hover:text-gray-400"
+              >
+                <FaGithub />
+              </a>
+              <a
+                href={project.demoLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white text-2xl hover:text-gray-400"
+              >
+                <FaExternalLinkAlt />
+              </a>
+            </div>
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-2">{project.title}</h3>
+              <p className="text-gray-400 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project.technologies.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="bg-gray-700 text-sm px-3 py-1 rounded-full"
                   >
-                    <i className="ri-external-link-line text-xl"></i>
-                  </a>
-                  <a
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-12 h-12 rounded-full bg-white/10 hover:bg-gray-800 text-white flex items-center justify-center transition-all"
-                  >
-                    <i className="ri-github-fill text-xl"></i>
-                  </a>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-5 space-y-3">
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                <p className="text-sm text-gray-400">{project.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech, idx) => (
-                    <span key={idx} className="text-xs bg-blue-500/10 text-blue-300 px-3 py-1 rounded-full border border-blue-500/20">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -45,9 +45,10 @@ const Home = () => {
             </h1>
 
             <p className="text-xl text-gray-300 max-w-2xl">
-              Hi, I'm Jitesh Jain — a frontend developer who crafts clean,
-              animated, and responsive web experiences with React, JavaScript,
-              and a creative touch.
+              Hi, I'm Jitesh Jain — a full-stack developer who builds dynamic,
+              responsive, and seamless web applications using React, Node.js,
+              and MongoDB. I combine clean frontend design with robust backend
+              logic to deliver smooth, scalable digital experiences.
             </p>
           </div>
 
@@ -92,7 +93,7 @@ const Home = () => {
             </a>
 
             <a
-              href="/Resume_Jitesh.pdf"
+              href="/Jitesh_Jain_Resume.pdf"
               download
               className="p-3 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors hover:scale-110 transform duration-200"
               title="Download Resume"

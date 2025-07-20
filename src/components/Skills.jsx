@@ -8,7 +8,7 @@ const Skills = () => {
       icon: <Code className="text-white" size={28} />,
       bg: 'from-blue-500 to-cyan-500',
       bullet: 'bg-cyan-400',
-      skills: ['React.js', 'Redux', 'JavaScript', 'HTML5', 'CSS3','C++','C','Tailwind CSS'],
+      skills: ['Node.js','Express.js','MongoDB','EJS','React.js', 'Redux', 'JavaScript', 'HTML5', 'CSS3','C++','C','Tailwind CSS'],
     },
     {
       title: 'Animation',
@@ -22,7 +22,7 @@ const Skills = () => {
       icon: <Settings className="text-white" size={28} />,
       bg: 'from-green-500 to-emerald-500',
       bullet: 'bg-green-400',
-      skills: ['Git', 'GitHub', 'VS Code', 'Vercel'],
+      skills: ['Git', 'GitHub', 'VS Code', 'Vercel','Render'],
     },
     {
       title: 'Soft Skills',
