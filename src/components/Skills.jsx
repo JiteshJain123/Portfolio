@@ -1,35 +1,53 @@
-import React from 'react';
-import { Code, Palette, Settings, Users } from 'lucide-react';
+import React from "react";
+import { Code, Palette, Settings, Users } from "lucide-react";
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Languages',
+      title: "Languages",
       icon: <Code className="text-white" size={28} />,
-      bg: 'from-blue-500 to-cyan-500',
-      bullet: 'bg-cyan-400',
-      skills: ['Node.js','Express.js','MongoDB','EJS','React.js', 'Redux', 'JavaScript', 'HTML5', 'CSS3','C++','C','Tailwind CSS'],
+      bg: "from-blue-500 to-cyan-500",
+      bullet: "bg-cyan-400",
+      skills: ["C", "C++", "JavaScript", "TypeScript", "HTML5", "CSS3"],
     },
     {
-      title: 'Animation',
+      title: "Libraries & Frameworks",
       icon: <Palette className="text-white" size={28} />,
-      bg: 'from-pink-500 to-purple-500',
-      bullet: 'bg-pink-400',
-      skills: ['GSAP', 'ScrollTrigger', 'Locomotive Scroll', 'Framer Motion'],
+      bg: "from-pink-500 to-purple-500",
+      bullet: "bg-pink-400",
+      skills: [
+        "Next.js",
+        "React.js",
+        "Redux",
+        "Prisma",
+        "Express.js",
+        "Recharts",
+        "shadcn/ui",
+        "Tailwind CSS",
+      ],
     },
     {
-      title: 'Tools',
+      title: "Databases",
       icon: <Settings className="text-white" size={28} />,
-      bg: 'from-green-500 to-emerald-500',
-      bullet: 'bg-green-400',
-      skills: ['Git', 'GitHub', 'VS Code', 'Vercel','Render'],
+      bg: "from-green-500 to-emerald-500",
+      bullet: "bg-green-400",
+      skills: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
     },
     {
-      title: 'Soft Skills',
+      title: "Tools & Platforms",
       icon: <Users className="text-white" size={28} />,
-      bg: 'from-orange-500 to-red-500',
-      bullet: 'bg-orange-400',
-      skills: ['Communication', 'Teamwork', 'Creativity', 'Writing'],
+      bg: "from-orange-500 to-red-500",
+      bullet: "bg-orange-400",
+      skills: [
+        "Docker",
+        "Git",
+        "GitHub",
+        "Vercel",
+        "Render",
+        "Neon",
+        "Upstash",
+        "VS Code",
+      ],
     },
   ];
 
@@ -39,10 +57,14 @@ const Skills = () => {
         {/* Title */}
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Skills & <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">Expertise</span>
+            Skills &{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+              Expertise
+            </span>
           </h2>
           <p className="text-lg text-gray-300 max-w-xl mx-auto">
-            A comprehensive toolkit for creating modern, interactive web experiences
+            A comprehensive toolkit for creating modern, interactive web
+            experiences
           </p>
           <div className="w-28 h-1 mt-4 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
         </div>
@@ -63,8 +85,13 @@ const Skills = () => {
                 <h3 className="text-xl font-semibold mb-4">{cat.title}</h3>
                 <ul className="space-y-2">
                   {cat.skills.map((skill, idx) => (
-                    <li key={idx} className="flex items-center gap-2 text-gray-300">
-                      <span className={`w-2.5 h-2.5 rounded-full ${cat.bullet}`}></span>
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 text-gray-300"
+                    >
+                      <span
+                        className={`w-2.5 h-2.5 rounded-full ${cat.bullet}`}
+                      ></span>
                       {skill}
                     </li>
                   ))}

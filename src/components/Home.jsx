@@ -45,10 +45,10 @@ const Home = () => {
             </h1>
 
             <p className="text-xl text-gray-300 max-w-2xl">
-              Hi, I'm Jitesh Jain — a full-stack developer who builds dynamic,
-              responsive, and seamless web applications using React, Node.js,
-              and MongoDB. I combine clean frontend design with robust backend
-              logic to deliver smooth, scalable digital experiences.
+              I'm a full-stack developer who builds dynamic, responsive, and
+              scalable web applications. My expertise spans Next.js, React,
+              Node.js, and modern databases like PostgreSQL and MongoDB, with a
+              focus on clean design and robust backend logic.
             </p>
           </div>
 
