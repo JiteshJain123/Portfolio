@@ -4,9 +4,23 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const filters = ["All","Backend","React", "Animation", "Clone"];
+  // Update the filters to include "Full-Stack"
+  const filters = ["All", "Full-Stack", "Backend", "React", "Animation", "Clone"];
 
   const projects = [
+    // Add the new "FinSight" project here
+    {
+      title: "FinSight – Personal Finance Tracker",
+      description:
+        "A full-stack financial tracker built with Next.js, Prisma, and PostgreSQL. It features robust budgeting, spending insights with real-time charts, and full transaction management.",
+      image:
+        "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      technologies: ["Next.js", "Prisma", "PostgreSQL", "docker", "Redis", "Recharts", "shadcn/ui"],
+      category: "Full-Stack",
+      demoLink: "https://finance-tracker-wpg1.vercel.app/",
+      githubLink: "https://github.com/JiteshJain123/finance-tracker",
+      featured: true,
+    },
     {
       title: "Trendify",
       description:
