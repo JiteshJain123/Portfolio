@@ -42,17 +42,17 @@ const About = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h3 className="text-3xl font-bold text-white">
-                Full-Stack Web Developer & Creative Thinker
+                Full-Stack Developer & Creative Thinker
               </h3>
 
+              {/* UPDATED PARAGRAPH 1 */}
               <p className="text-lg text-gray-300 leading-relaxed">
-               I'm a passionate Full Stack Developer who loves turning ideas into impactful digital experiences. Currently pursuing my B.Tech in Electrical and Electronics Engineering at IIIT Gwalior, I specialize in building sleek frontends and powerful backends using modern web technologies. I enjoy blending design, logic, and real-world problem-solving to create scalable and user-focused web applications.
+                I'm a passionate Full-Stack Developer specializing in building scalable web applications with a focus on AI-powered features. Currently pursuing my B.Tech at IIIT Gwalior, I leverage modern technologies like Next.js, Convex, and Prisma to build sleek frontends and robust, performant backends.
               </p>
 
+              {/* UPDATED PARAGRAPH 2 */}
               <p className="text-lg text-gray-300 leading-relaxed">
-                My journey in tech started with curiosity and has evolved into a
-                passion for creating interactive web experiences that not only
-                look great but also solve real problems.
+                My goal is to blend design and logic to create intelligent, user-centric digital experiences that not only look great but also solve complex, real-world problems.
               </p>
             </div>
 
@@ -89,10 +89,11 @@ const About = () => {
                 <div className="text-3xl font-bold text-blue-400">3+</div>
                 <div className="text-sm text-gray-400">Years Learning</div>
               </div>
-              {/* <div className="text-center">
+              {/* UPDATED STATS */}
+              <div className="text-center">
                 <div className="text-3xl font-bold text-purple-400">5+</div>
                 <div className="text-sm text-gray-400">Projects Built</div>
-              </div> */}
+              </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400">100%</div>
                 <div className="text-sm text-gray-400">Dedication</div>

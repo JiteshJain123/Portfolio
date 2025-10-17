@@ -39,16 +39,16 @@ const Home = () => {
               Into
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-                Interactive
+                Intelligent
               </span>{" "}
               Interfaces
             </h1>
 
             <p className="text-xl text-gray-300 max-w-2xl">
-              I'm a full-stack developer who builds dynamic, responsive, and
-              scalable web applications. My expertise spans Next.js, React,
-              Node.js, and modern databases like PostgreSQL and MongoDB, with a
-              focus on clean design and robust backend logic.
+              I'm a full-stack developer specializing in building AI-powered,
+              scalable web applications. My expertise lies in Next.js and React,
+              paired with modern backends like Convex and Prisma, and secure
+              authentication using Clerk.
             </p>
           </div>
 
@@ -98,18 +98,21 @@ const Home = () => {
               className="p-3 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors hover:scale-110 transform duration-200"
               title="Download Resume"
             >
+              {/* Assuming you have remixicon installed or are using an icon library */}
               <i className="ri-upload-2-line text-xl text-white"></i>
             </a>
           </div>
         </div>
 
-        {/* Right Side - Image or GIF */}
-        <div className="relative">
-          <div className="relative w-80 h-80 mx-auto overflow-hidden rounded-3xl bg-slate-800 p-6 border border-slate-700 shadow-md">
+        {/* Right Side - Image */}
+        <div className="relative flex justify-center items-center">
+          {/* Removed fixed w-80 h-80 and padding, added aspect-ratio for better control */}
+          {/* Increased size and removed borders/shadows to make it fill more space naturally */}
+          <div className="relative w-full max-w-xl lg:max-w-none mx-auto aspect-video overflow-hidden rounded-3xl">
             <img
-              src="/home-dev.png" // Place the image in public folder or adjust if using from assets
+              src="/home-dev.png" // This is where Image 3 (your new image) will be used
               alt="Developer working on laptop"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover object-center" // object-cover to fill container, object-center for alignment
             />
           </div>
         </div>
