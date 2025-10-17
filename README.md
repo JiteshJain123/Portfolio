@@ -1,6 +1,6 @@
 # 💼 Portfolio Website
 
-A **modern and responsive portfolio website** built using **React**, **Vite**, and **Tailwind CSS** to showcase my frontend development skills, projects, and experience.
+A **modern and responsive portfolio website** built with **React** and **Tailwind CSS**, showcasing full-stack projects, AI-powered applications, and a wide range of development skills.
 
 ### 🚀 [Live Demo](https://jitesh-jain-portfolio.vercel.app/)  📂 [GitHub Repo](https://github.com/JiteshJain123/Portfolio)
 
@@ -8,31 +8,29 @@ A **modern and responsive portfolio website** built using **React**, **Vite**, a
 
 ## 🛠️ Tech Stack
 
-- ⚛️ React.js  
-- ⚡ Vite  
-- 🎨 Tailwind CSS  
-- 📦 Lucide Icons / Remix Icons  
+- ⚛️ **React.js**
+- ⚡ **Vite**
+- 🎨 **Tailwind CSS**
+- 🌀 **Framer Motion** (for animations)
+- 📦 **Lucide Icons** / **Remix Icons**
 
 ---
 
 ## ✨ Features
 
-- Smooth scrolling and elegant animations  
-- Fully responsive design for all screen sizes  
-- Project showcase with live links and GitHub repos  
-- Skill bars with hover effects  
-- Experience and volunteering timeline  
-- Contact section with mail integration  
+- **Full-Stack Project Showcase**: Highlights complex applications built with modern backends like Convex, Prisma, and PostgreSQL.
+- **AI-Powered Integrations**: Demonstrates experience in building applications with intelligent features for content generation and management.
+- **Dynamic Project Filtering**: Allows visitors to filter projects by category (e.g., Full-Stack, Backend, AI).
+- **Smooth Animations**: Utilizes Framer Motion for elegant transitions and a fluid user experience.
+- **Fully Responsive Design**: Ensures a seamless experience on desktops, tablets, and mobile devices.
 
 ---
 
 ## 🖼️ Sections Included
 
-- **Home** – Intro + Profile Icon  
-- **About** – My journey  
-- **Skills** – Technical & Soft Skills with animated bars  
-- **Projects** – Featured + other projects with hover effects  
-- **Experience** – Technical + Management (Korero, Cloth Donation, etc.)  
-- **Contact** – Reach me easily  
-
----
+- **Home**: Hero section with an updated bio highlighting full-stack and AI expertise.
+- **About**: Detailed professional summary and educational background.
+- **Skills**: A comprehensive overview of my technical toolkit, including backend and platform technologies.
+- **Projects**: An interactive grid featuring major full-stack apps like an AI Content Platform and a Personal Finance Tracker.
+- **Experience**: A timeline of relevant technical and management roles.
+- **Contact**: A simple and effective way to get in touch.
