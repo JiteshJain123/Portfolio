@@ -20,6 +20,7 @@ const Skills = () => {
         "React.js",
         "Redux",
         "Prisma",
+        "Convex", // Added
         "Express.js",
         "Recharts",
         "shadcn/ui",
@@ -43,6 +44,7 @@ const Skills = () => {
         "Git",
         "GitHub",
         "Vercel",
+        "Clerk", // Added
         "Render",
         "Neon",
         "Upstash",

@@ -3,7 +3,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -59,16 +59,6 @@ const Header = () => {
               </button>
             ))}
           </nav>
-
-          {/* Theme Toggle */}
-          {/* <div className="hidden md:flex items-center space-x-4">
-            <button
-              onClick={() => setIsDarkMode(!isDarkMode)}
-              className="p-2 rounded-lg bg-slate-800 hover:bg-slate-700 transition-colors"
-            >
-              {isDarkMode ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
-          </div> */}
 
           {/* Mobile Menu Button */}
           <button
