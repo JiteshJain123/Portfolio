@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -40,11 +39,12 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Top bar */}
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="text-2xl font-bold">
+          <div className="text-2xl font-bold flex items-center gap-1">
             <span className="text-blue-400">Jitesh</span>
-            <span className="text-white"> Jain</span>
+            <span className="text-white">Jain</span>
           </div>
 
           {/* Desktop Nav */}
@@ -62,29 +62,31 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white p-2 rounded-md hover:bg-slate-800 transition"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
-        {/* Mobile Dropdown Nav */}
-        {isMenuOpen && (
-          <div className="md:hidden pb-4 border-t border-slate-700 mt-4">
-            <div className="flex flex-col space-y-3 pt-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-gray-300 hover:text-blue-400 transition-colors duration-200 text-left font-medium"
-                >
-                  {item.name}
-                </button>
-              ))}
-            </div>
+        {/* Mobile Dropdown */}
+        <div
+          className={`md:hidden transition-all duration-300 overflow-hidden ${
+            isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-col items-start space-y-4 py-4 px-4 bg-slate-900/95 rounded-xl shadow-lg">
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => scrollToSection(item.id)}
+                className="w-full text-left text-gray-300 hover:text-blue-400 text-lg font-medium transition-colors duration-200"
+              >
+                {item.name}
+              </button>
+            ))}
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
