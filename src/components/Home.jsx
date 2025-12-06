@@ -92,7 +92,7 @@ const Home = () => {
               <Linkedin size={24} />
             </a>
 
-            <a
+            {/* <a
               href="/Jitesh_Jain_Resume.pdf"
               download
               className="p-3 bg-slate-800 rounded-xl hover:bg-slate-700 transition-colors hover:scale-110 transform duration-200"
@@ -100,7 +100,7 @@ const Home = () => {
             >
               {/* Assuming you have remixicon installed or are using an icon library */}
               <i className="ri-upload-2-line text-xl text-white"></i>
-            </a>
+            </a> */}
           </div>
         </div>
 
