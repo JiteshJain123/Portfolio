@@ -12,9 +12,9 @@ function App() {
       <Header />
       <Home />
       <About />
+      <Experience />
       <Skills />
       <Projects />
-      <Experience />
       <Contacts />
     </div>
   );
