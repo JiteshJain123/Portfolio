@@ -2,36 +2,36 @@ import React from 'react';
 import { Briefcase, Mic, Users } from 'lucide-react';
 
 const experiences = [
+{
+  title: "Full Stack Developer Intern - Techronyx Solutions Pvt. Ltd., Pune",
+  icon: <Briefcase size={24} />,
+  duration: "Aug 2025 – Nov 2025",
+  details: [
+    "Developed and optimized production-grade front-end modules using modern web technologies.",
+    "Built reusable, responsive UI components with strong focus on performance and clean UI/UX.",
+    "Integrated frontend with backend REST APIs, implementing validation, error handling, and debugging improvements."
+  ],
+  color: "from-blue-500 to-cyan-500"
+},
   {
     title: "Technical Handler - Rotaract Club [IIITM Gwalior]",
-    icon: <Briefcase size={24} />,
+    icon: <Users size={24} />,
     duration: "2023 - Present",
     details: [
       "Built and managed event websites using React.js.",
-      "Handled deployment, debugging, and frontend performance.",
-      "Created interactive UI/UX with GSAP and Locomotive Scroll."
+      "Handled deployment, debugging, and frontend performance optimization.",
+      "Created interactive UI/UX experiences using GSAP and Locomotive Scroll."
     ],
-    color: "from-blue-500 to-cyan-500"
+    color: "from-green-500 to-teal-500"
   },
   {
     title: "Volunteer & Management - Social Drives",
     icon: <Users size={24} />,
     duration: "2022 - Present",
     details: [
-      "Organized and participated in cloth donation drives.",
-      "Collaborated with student bodies to ensure smooth logistics.",
-      "Coordinated with NGOs and spread awareness on campus."
-    ],
-    color: "from-green-500 to-teal-500"
-  },
-  {
-    title: "Anchor - Korero Event",
-    icon: <Mic size={24} />,
-    duration: "Tech Fest 2023",
-    details: [
-      "Hosted the event and engaged the audience throughout sessions.",
-      "Collaborated with speakers and tech clubs for smooth flow.",
-      "Helped manage schedules and transitions on stage."
+      "Organized and participated in cloth donation drives and social initiatives.",
+      "Collaborated with student bodies to ensure smooth logistics and coordination.",
+      "Worked with NGOs to spread awareness and increase campus participation."
     ],
     color: "from-purple-500 to-pink-500"
   }
