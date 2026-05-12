@@ -57,7 +57,7 @@ const Skills = () => {
     <section id="skills" className="py-20 px-4 bg-slate-900 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
-        <div className="text-center mb-16">
+        <div data-reveal className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Skills &{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
@@ -72,7 +72,7 @@ const Skills = () => {
         </div>
 
         {/* Skill Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div data-reveal className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {skillCategories.map((cat, index) => (
             <div
               key={index}

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -39,7 +39,6 @@ const Header = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top bar */}
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <div className="text-2xl font-bold flex items-center gap-1">
@@ -59,6 +58,16 @@ const Header = () => {
               </button>
             ))}
           </nav>
+
+          {/* Resume button — desktop only */}
+          <a
+            href="/Jitesh_Jain_Resume.pdf"
+            download
+            className="hidden md:flex items-center gap-2 border border-blue-500 text-blue-400 px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200 group"
+          >
+            <Download size={15} className="group-hover:translate-y-0.5 transition-transform" />
+            Resume
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -85,6 +94,15 @@ const Header = () => {
                 {item.name}
               </button>
             ))}
+            <a
+              href="/Jitesh_Jain_Resume.pdf"
+              download
+              className="flex items-center gap-2 border border-blue-500 text-blue-400 px-4 py-2 rounded-lg text-sm font-semibold w-full justify-center"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Download size={15} />
+              Download Resume
+            </a>
           </div>
         </div>
       </div>
