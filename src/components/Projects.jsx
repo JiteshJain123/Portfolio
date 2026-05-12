@@ -116,6 +116,11 @@ const Projects = () => {
             key={index}
             className="relative bg-gray-900 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300 group"
           >
+            {project.featured && (
+              <div className="absolute top-4 right-4 bg-yellow-500 text-black px-3 py-1 rounded-full text-sm font-semibold z-10">
+                Featured
+              </div>
+            )}
             <img
               src={project.image}
               alt={project.title}
