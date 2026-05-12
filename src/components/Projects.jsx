@@ -17,7 +17,7 @@ const Projects = () => {
         "https://media.istockphoto.com/id/2197955227/photo/humans-are-using-laptops-and-computers-to-interact-with-ai-helping-them-create-code-train-ai.jpg?s=612x612&w=0&k=20&c=LQF82XJxK0LeBcUUWD2SGOt_5r9PCo35Lx6wWtK8HnY=",
       technologies: ["Next.js", "Convex", "Clerk", "Tailwind CSS"],
       category: "Full-Stack",
-      demoLink: "https://ai-creator-platform-topaz.vercel.app/",
+      demoLink: "https://ai-creator-platform-suu7.vercel.app/",
       githubLink: "https://github.com/JiteshJain123/ai-creator-platform",
       featured: true,
     },
