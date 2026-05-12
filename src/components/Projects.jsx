@@ -90,10 +90,10 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-16 px-4 bg-slate-900 text-white">
-      <h2 className="text-4xl font-bold text-center mb-10">Projects</h2>
+      <h2 data-reveal className="text-4xl font-bold text-center mb-10">Projects</h2>
 
       {/* Filter Buttons */}
-      <div className="flex flex-wrap justify-center gap-4 mb-10">
+      <div data-reveal className="flex flex-wrap justify-center gap-4 mb-10">
         {filters.map((filter) => (
           <button
             key={filter}
@@ -110,7 +110,7 @@ const Projects = () => {
       </div>
 
       {/* Project Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      <div data-reveal className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {filteredProjects.map((project, index) => (
           <div
             key={index}

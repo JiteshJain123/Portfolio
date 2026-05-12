@@ -5,7 +5,7 @@ const About = () => {
   return (
     <section id="about" className="py-20 px-4 bg-slate-800/50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        <div data-reveal className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
@@ -15,7 +15,7 @@ const About = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div data-reveal className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
           <div className="relative">
             <div className="relative w-96 h-96 mx-auto">

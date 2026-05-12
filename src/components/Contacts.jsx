@@ -80,7 +80,7 @@ const Contacts = () => {
     <section id="contact" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="text-center mb-16">
+        <div data-reveal className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-red-400">Connect</span>
           </h2>
@@ -90,7 +90,7 @@ const Contacts = () => {
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-red-500 mx-auto mt-6 rounded-full"></div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div data-reveal className="grid lg:grid-cols-2 gap-12">
           {/* Left Column */}
           <div className="space-y-8">
             <div>

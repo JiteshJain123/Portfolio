@@ -1,7 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 
+const roles = [
+  "Full-Stack Developer",
+  "AI App Builder",
+  "Next.js Enthusiast",
+  "Open Source Contributor",
+];
+
+const useTypewriter = (words, typingSpeed = 80, deletingSpeed = 50, pause = 1500) => {
+  const [displayed, setDisplayed] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const current = words[wordIndex % words.length];
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        setDisplayed(current.slice(0, displayed.length + 1));
+        if (displayed.length + 1 === current.length) {
+          setTimeout(() => setIsDeleting(true), pause);
+        }
+      } else {
+        setDisplayed(current.slice(0, displayed.length - 1));
+        if (displayed.length - 1 === 0) {
+          setIsDeleting(false);
+          setWordIndex((i) => i + 1);
+        }
+      }
+    }, isDeleting ? deletingSpeed : typingSpeed);
+    return () => clearTimeout(timeout);
+  }, [displayed, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pause]);
+
+  return displayed;
+};
+
 const Home = () => {
+  const typedRole = useTypewriter(roles);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -43,6 +79,11 @@ const Home = () => {
               </span>{" "}
               Interfaces
             </h1>
+
+            <div className="flex items-center gap-2 text-xl font-medium text-cyan-400 h-8">
+              <span>{typedRole}</span>
+              <span className="inline-block w-0.5 h-6 bg-cyan-400 animate-pulse"></span>
+            </div>
 
             <p className="text-xl text-gray-300 max-w-2xl">
               I'm a full-stack developer specializing in building AI-powered,
@@ -96,14 +137,29 @@ const Home = () => {
 
         {/* Right Side - Image */}
         <div className="relative flex justify-center items-center">
-          {/* Removed fixed w-80 h-80 and padding, added aspect-ratio for better control */}
-          {/* Increased size and removed borders/shadows to make it fill more space naturally */}
-          <div className="relative w-full max-w-xl lg:max-w-none mx-auto aspect-video overflow-hidden rounded-3xl">
+          {/* Background glow */}
+          <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-3xl blur-2xl pointer-events-none"></div>
+
+          {/* Image with glowing border */}
+          <div className="relative w-full max-w-xl lg:max-w-none mx-auto aspect-video overflow-hidden rounded-3xl border border-blue-500/25 shadow-2xl shadow-blue-500/15">
             <img
-              src="/home-dev.png" // This is where Image 3 (your new image) will be used
+              src="/home-dev.png"
               alt="Developer working on laptop"
-              className="w-full h-full object-cover object-center" // object-cover to fill container, object-center for alignment
+              className="w-full h-full object-cover object-center"
             />
+            {/* Bottom fade overlay */}
+            <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-gradient-to-t from-slate-900/50 to-transparent"></div>
+          </div>
+
+          {/* Floating tech badges */}
+          <div className="hidden sm:flex absolute top-4 -right-3 items-center gap-1.5 bg-slate-800/90 backdrop-blur-sm border border-blue-500/30 px-3 py-1.5 rounded-lg text-xs font-semibold text-blue-400 shadow-lg shadow-blue-500/20 animate-bounce" style={{ animationDuration: "3s" }}>
+            ⚡ Next.js
+          </div>
+          <div className="hidden sm:flex absolute bottom-8 -left-3 items-center gap-1.5 bg-slate-800/90 backdrop-blur-sm border border-purple-500/30 px-3 py-1.5 rounded-lg text-xs font-semibold text-purple-400 shadow-lg shadow-purple-500/20 animate-bounce" style={{ animationDuration: "3.5s" }}>
+            🚀 React
+          </div>
+          <div className="hidden sm:flex absolute top-1/2 -right-4 -translate-y-1/2 items-center gap-1.5 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 px-3 py-1.5 rounded-lg text-xs font-semibold text-cyan-400 shadow-lg shadow-cyan-500/20 animate-bounce" style={{ animationDuration: "4s" }}>
+            🔷 TypeScript
           </div>
         </div>
       </div>
