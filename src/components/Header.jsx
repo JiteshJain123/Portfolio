@@ -27,6 +27,7 @@ const Header = () => {
     { name: "Experience", id: "experience" },
     { name: "Skills", id: "skills" },
     { name: "Projects", id: "projects" },
+    { name: "Achievements", id: "achievements" },
     { name: "Contact", id: "contact" },
   ];
 
@@ -47,12 +48,12 @@ const Header = () => {
           </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex flex-1 justify-center space-x-8">
+          <nav className="hidden md:flex flex-1 justify-center space-x-3 lg:space-x-5">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium"
+                className="text-sm text-gray-300 hover:text-blue-400 transition-colors duration-200 font-medium whitespace-nowrap"
               >
                 {item.name}
               </button>

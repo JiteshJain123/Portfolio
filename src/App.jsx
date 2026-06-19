@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Contacts from "./components/Contacts";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Achievements from "./components/Achievements";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
       <Experience />
       <Skills />
       <Projects />
+      <Achievements />
       <Contacts />
     </div>
   );
