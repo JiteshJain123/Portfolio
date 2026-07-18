@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Download, FileText } from "lucide-react";
+import { useUI } from "../context/UIContext";
 
 const roles = [
   "Full-Stack Developer",
@@ -37,6 +38,7 @@ const useTypewriter = (words, typingSpeed = 80, deletingSpeed = 50, pause = 1500
 
 const Home = () => {
   const typedRole = useTypewriter(roles);
+  const { openResume } = useUI();
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -82,7 +84,7 @@ const Home = () => {
             <p className="text-gray-400 text-lg tracking-wide">Hi, I'm</p>
             <h1 className="text-6xl lg:text-8xl font-black leading-none tracking-tight">
               <span className="text-white">Jitesh</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-500">
+              <span className="animated-gradient-text">
                 Jain
               </span>
             </h1>
@@ -225,27 +227,36 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Resume download */}
-              <a
-                href="/Jitesh_Jain_Resume.pdf"
-                download
-                className="flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl text-sm font-semibold hover:opacity-90 hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-blue-500/20"
-              >
-                <Download size={15} />
-                Download Resume
-              </a>
+              {/* Resume — view inline or download */}
+              <div className="flex gap-2">
+                <button
+                  onClick={openResume}
+                  className="flex items-center justify-center gap-2 flex-1 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl text-sm font-semibold hover:opacity-90 hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-blue-500/20"
+                >
+                  <FileText size={15} />
+                  View Résumé
+                </button>
+                <a
+                  href="/Jitesh_Jain_Resume.pdf"
+                  download
+                  aria-label="Download résumé"
+                  className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/70 border border-slate-600 text-gray-200 rounded-xl text-sm font-semibold hover:border-slate-400 hover:scale-[1.02] transition-all duration-200"
+                >
+                  <Download size={15} />
+                </a>
+              </div>
 
               {/* Bottom shimmer line */}
               <div className="absolute bottom-0 left-10 right-10 h-px bg-gradient-to-r from-transparent via-purple-500/70 to-transparent" />
             </div>
 
             {/* Floating badge — achievement */}
-            <div className="absolute -top-5 -right-4 flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 backdrop-blur-sm px-3 py-2 rounded-xl text-xs font-semibold text-amber-300 shadow-lg shadow-amber-500/10 animate-bounce" style={{ animationDuration: "3s" }}>
+            <div className="absolute -top-5 -right-4 flex items-center gap-1.5 bg-amber-500/15 border border-amber-500/40 backdrop-blur-sm px-3 py-2 rounded-xl text-xs font-semibold text-amber-300 shadow-lg shadow-amber-500/10 animate-float">
               🏆 SIH 2025 Semi-Finalist
             </div>
 
             {/* Floating badge — internship */}
-            <div className="absolute -bottom-5 -left-4 flex items-center gap-1.5 bg-blue-500/15 border border-blue-500/40 backdrop-blur-sm px-3 py-2 rounded-xl text-xs font-semibold text-blue-300 shadow-lg shadow-blue-500/10 animate-bounce" style={{ animationDuration: "4s" }}>
+            <div className="absolute -bottom-5 -left-4 flex items-center gap-1.5 bg-blue-500/15 border border-blue-500/40 backdrop-blur-sm px-3 py-2 rounded-xl text-xs font-semibold text-blue-300 shadow-lg shadow-blue-500/10 animate-float" style={{ animationDelay: "1.5s" }}>
               💼 Intern @ Techronyx
             </div>
           </div>

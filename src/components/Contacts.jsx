@@ -6,6 +6,7 @@ const Contacts = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -14,6 +15,7 @@ const Contacts = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    setError(false);
     try {
       await emailjs.send(
         'service_ke0t5xy',
@@ -24,9 +26,10 @@ const Contacts = () => {
       setSent(true);
       setFormData({ name: '', email: '', message: '' });
       setTimeout(() => setSent(false), 5000);
-    } catch (error) {
-      console.error('EmailJS error:', error);
-      alert('Error sending message. Please try again later.');
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      setError(true);
+      setTimeout(() => setError(false), 6000);
     } finally {
       setIsLoading(false);
     }
@@ -44,21 +47,19 @@ const Contacts = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 px-4 bg-slate-900">
+    <section id="contact" className="py-20 px-4 bg-slate-900/40">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
         <div data-reveal className="text-center mb-14">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Let's{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-              Connect
-            </span>
+            <span className="agt agt-pink">Connect</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-xl mx-auto">
             Have a project in mind or just want to say hi? My inbox is always open.
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-5 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-500 mx-auto mt-5 rounded-full bar-glow" />
         </div>
 
         <div data-reveal className="grid lg:grid-cols-2 gap-10">
@@ -136,6 +137,11 @@ const Contacts = () => {
                 <span className="w-2 h-2 rounded-full bg-emerald-400" /> Message sent! I'll get back to you soon.
               </div>
             )}
+            {error && (
+              <div className="mb-4 flex items-center gap-2 px-4 py-3 bg-red-500/15 border border-red-500/30 rounded-xl text-red-400 text-sm font-medium">
+                <span className="w-2 h-2 rounded-full bg-red-400" /> Couldn't send right now — please email me directly at jainjitesh2004@gmail.com.
+              </div>
+            )}
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
@@ -199,7 +205,7 @@ const Contacts = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-slate-800">
           <p className="text-gray-500 text-sm">
-            © 2025 Jitesh Jain · Crafted with ❤️ using React &amp; Tailwind CSS
+            © {new Date().getFullYear()} Jitesh Jain · Crafted with ❤️ using React &amp; Tailwind CSS
           </p>
         </div>
       </div>

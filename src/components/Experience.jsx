@@ -69,21 +69,19 @@ const otherRoles = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-20 px-4 bg-slate-900">
+    <section id="experience" className="py-20 px-4 bg-slate-900/40">
       <div className="max-w-5xl mx-auto">
 
         {/* Heading */}
         <div data-reveal className="text-center mb-14">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Experience &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-              Contributions
-            </span>
+            <span className="agt agt-blue">Contributions</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-2xl mx-auto">
             A journey of learning, building, and giving back to the community
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-5 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-5 rounded-full bar-glow" />
         </div>
 
         {/* ── Featured: Professional Internship ── */}

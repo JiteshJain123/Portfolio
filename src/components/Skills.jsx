@@ -70,20 +70,18 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 px-4 bg-slate-900 text-white">
+    <section id="skills" className="py-20 px-4 text-white">
       <div className="max-w-6xl mx-auto">
         {/* Title */}
         <div data-reveal className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Skills &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
-              Expertise
-            </span>
+            <span className="agt agt-purple">Expertise</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-xl mx-auto">
             A comprehensive toolkit for creating modern, intelligent web experiences
           </p>
-          <div className="w-28 h-1 mt-4 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+          <div className="w-28 h-1 mt-4 mx-auto bg-gradient-to-r from-purple-400 to-pink-400 rounded-full bar-glow"></div>
         </div>
 
         {/* Skill Cards */}

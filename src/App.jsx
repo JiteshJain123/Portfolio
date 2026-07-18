@@ -7,6 +7,12 @@ import Contacts from "./components/Contacts";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
+import Blog from "./components/Blog";
+import CommandPalette from "./components/CommandPalette";
+import ResumeViewer from "./components/ResumeViewer";
+import AnimatedBackground from "./components/AnimatedBackground";
+import ScrollProgress from "./components/ScrollProgress";
+import { UIProvider } from "./context/UIContext";
 
 function App() {
   useEffect(() => {
@@ -26,16 +32,25 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-slate-900 text-white scroll-smooth overflow-x-hidden">
-      <Header />
-      <Home />
-      <About />
-      <Experience />
-      <Skills />
-      <Projects />
-      <Achievements />
-      <Contacts />
-    </div>
+    <UIProvider>
+      <AnimatedBackground />
+      <ScrollProgress />
+      <div className="relative text-white scroll-smooth overflow-x-hidden">
+        <Header />
+        <Home />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <Achievements />
+        <Blog />
+        <Contacts />
+
+        {/* Global overlays */}
+        <CommandPalette />
+        <ResumeViewer />
+      </div>
+    </UIProvider>
   );
 }
 

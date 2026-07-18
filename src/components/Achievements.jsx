@@ -51,14 +51,12 @@ const Achievements = () => {
           </div>
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
             Achievements &{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-400">
-              Awards
-            </span>
+            <span className="agt agt-gold">Awards</span>
           </h2>
           <p className="text-lg text-gray-400 max-w-xl mx-auto">
             Competitive milestones earned through building and problem-solving at a national scale
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mt-5 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-yellow-500 to-orange-500 mx-auto mt-5 rounded-full bar-glow" />
         </div>
 
         {/* Cards */}

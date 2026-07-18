@@ -30,15 +30,12 @@ const About = () => {
         {/* Heading */}
         <div data-reveal className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            About{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Me
-            </span>
+            About <span className="agt agt-cyan">Me</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
             A driven developer who loves shipping intelligent, real-world products
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-5 rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto mt-5 rounded-full bar-glow" />
         </div>
 
         <div data-reveal className="grid lg:grid-cols-2 gap-10 items-start">
@@ -48,9 +45,7 @@ const About = () => {
             <div className="space-y-4">
               <h3 className="text-3xl font-bold text-white leading-snug">
                 Full-Stack Developer &amp;{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                  Creative Thinker
-                </span>
+                <span className="agt agt-cyan">Creative Thinker</span>
               </h3>
               <p className="text-gray-300 text-base leading-relaxed">
                 I'm a passionate Full-Stack Developer specializing in building scalable web
