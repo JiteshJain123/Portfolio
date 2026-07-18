@@ -121,6 +121,7 @@ const CommandPalette = () => {
       aria-modal="true"
       aria-label="Command palette"
       className="fixed inset-0 z-[110] flex items-start justify-center pt-[12vh] px-4"
+      onKeyDown={onKeyDown}
       onMouseDown={(e) => {
         if (e.target === e.currentTarget) closePalette();
       }}
@@ -135,7 +136,6 @@ const CommandPalette = () => {
             ref={inputRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={onKeyDown}
             placeholder="Jump to a section or run a command…"
             className="w-full bg-transparent py-4 text-sm text-white placeholder:text-gray-600 focus:outline-none"
           />
