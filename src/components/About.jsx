@@ -3,7 +3,7 @@ import { GraduationCap, MapPin, Calendar, Zap, Target, BookOpen, Globe } from "l
 
 const stats = [
   { val: "3+", label: "Years of Learning", color: "text-blue-400", glow: "hover:border-blue-500/50 hover:shadow-blue-500/10" },
-  { val: "5+", label: "Projects Built", color: "text-purple-400", glow: "hover:border-purple-500/50 hover:shadow-purple-500/10" },
+  { val: "12+", label: "Projects Built", color: "text-purple-400", glow: "hover:border-purple-500/50 hover:shadow-purple-500/10" },
   { val: "2",  label: "National Awards", color: "text-amber-400", glow: "hover:border-amber-500/50 hover:shadow-amber-500/10" },
   { val: "1",  label: "Internship", color: "text-cyan-400", glow: "hover:border-cyan-500/50 hover:shadow-cyan-500/10" },
 ];
@@ -18,8 +18,8 @@ const highlights = [
 const currentFocus = [
   "Building production-grade full-stack applications with AI integration",
   "Integrating Generative AI (LLMs, RAG) into real-world products",
-  "System Design & scalable backend architecture",
-  "Contributing to open-source projects",
+  "Event-driven microservices & scalable backend architecture",
+  "Cloud deployment & CI/CD with Docker, AWS and Terraform",
 ];
 
 const About = () => {
@@ -44,14 +44,15 @@ const About = () => {
           <div className="space-y-7">
             <div className="space-y-4">
               <h3 className="text-3xl font-bold text-white leading-snug">
-                Full-Stack Developer &amp;{" "}
+                Software Engineer &amp;{" "}
                 <span className="agt agt-cyan">Creative Thinker</span>
               </h3>
               <p className="text-gray-300 text-base leading-relaxed">
-                I'm a passionate Full-Stack Developer specializing in building scalable web
-                applications with a focus on AI-powered features. Currently pursuing my B.Tech
-                at IIIT Gwalior, I leverage modern technologies like Next.js, Convex, and
-                Prisma to build sleek frontends and robust, performant backends.
+                I'm a passionate Full Stack Software Engineer specializing in building scalable web
+                applications with a focus on AI-powered features. Currently a final-year B.Tech
+                student at ABV-IIITM Gwalior, I work across React/Next.js, Node.js/Express and
+                FastAPI, PostgreSQL/MongoDB, and Docker/AWS to build sleek frontends and robust,
+                event-driven backends.
               </p>
               <p className="text-gray-400 text-base leading-relaxed">
                 My goal is to blend design and logic to create intelligent, user-centric
@@ -105,7 +106,7 @@ const About = () => {
                     B.Tech — Electrical and Electronics Engineering
                   </h5>
                   <span className="flex-shrink-0 px-2.5 py-1 bg-blue-500/20 text-blue-300 border border-blue-500/30 rounded-full text-xs font-bold">
-                    7.54 CGPA
+                    7.5 CGPA
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-400">
@@ -125,7 +126,7 @@ const About = () => {
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs text-gray-400">
-                  <span className="flex items-center gap-1"><MapPin size={11} /> MSS Public School, Gwalior</span>
+                  <span className="flex items-center gap-1"><MapPin size={11} /> MSS Public School, Kishangarh</span>
                   <span className="flex items-center gap-1"><Calendar size={11} /> 2021 – 2022</span>
                 </div>
               </div>

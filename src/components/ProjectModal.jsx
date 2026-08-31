@@ -86,14 +86,16 @@ const ProjectModal = ({ project, onClose }) => {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              <a
-                href={project.demoLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-gradient-to-r ${project.accent} hover:opacity-90 hover:scale-[1.02] transition-all`}
-              >
-                <FaExternalLinkAlt size={12} /> Live Demo
-              </a>
+              {project.demoLink && (
+                <a
+                  href={project.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold text-white bg-gradient-to-r ${project.accent} hover:opacity-90 hover:scale-[1.02] transition-all`}
+                >
+                  <FaExternalLinkAlt size={12} /> Live Demo
+                </a>
+              )}
               <a
                 href={project.githubLink}
                 target="_blank"

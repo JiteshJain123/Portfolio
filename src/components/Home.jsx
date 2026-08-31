@@ -3,10 +3,10 @@ import { ArrowRight, Github, Linkedin, Mail, MapPin, Download, FileText } from "
 import { useUI } from "../context/UIContext";
 
 const roles = [
-  "Full-Stack Developer",
+  "Full Stack Software Engineer",
   "AI App Builder",
   "Next.js Enthusiast",
-  "Open Source Contributor",
+  "Cloud & DevOps Practitioner",
 ];
 
 const useTypewriter = (words, typingSpeed = 80, deletingSpeed = 50, pause = 1500) => {
@@ -103,8 +103,8 @@ const Home = () => {
           <p className="text-gray-300 text-lg leading-relaxed max-w-lg">
             Building{" "}
             <span className="text-white font-semibold">AI-powered, scalable web applications</span>{" "}
-            with Next.js, React, and modern backends like Convex and Prisma.
-            Semi-Finalist at{" "}
+            with Next.js, React, Node.js and PostgreSQL — plus event-driven
+            microservices and cloud deployment on AWS. Semi-Finalist at{" "}
             <span className="text-amber-400 font-semibold">Smart India Hackathon 2025</span>.
           </p>
 
@@ -201,7 +201,7 @@ const Home = () => {
               {/* Name & title */}
               <div className="text-center mb-5">
                 <h2 className="text-2xl font-bold text-white">Jitesh Jain</h2>
-                <p className="text-sm text-gray-400 mt-1">Full-Stack Developer · AI Builder</p>
+                <p className="text-sm text-gray-400 mt-1">Software Engineer · AI Builder</p>
                 <p className="text-xs text-gray-500 mt-1 flex items-center justify-center gap-1">
                   <MapPin size={11} /> ABV-IIITM Gwalior, India
                 </p>

@@ -119,15 +119,17 @@ const Projects = () => {
                   >
                     <FaGithub size={13} /> Source Code
                   </a>
-                  <a
-                    href={project.demoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors font-medium"
-                  >
-                    <FaExternalLinkAlt size={11} /> Live Demo
-                  </a>
+                  {project.demoLink && (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors font-medium"
+                    >
+                      <FaExternalLinkAlt size={11} /> Live Demo
+                    </a>
+                  )}
                 </div>
               </div>
             </button>
