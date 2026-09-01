@@ -46,6 +46,8 @@ const skillCategories = [
     pillStyle: "bg-violet-500/10 text-violet-300 border-violet-500/30",
     skills: [
       "LangChain",
+      "AI Agents",
+      "MCP (Model Context Protocol)",
       "RAG Pipelines",
       "Prompt Engineering",
       "OpenAI / Gemini / Claude",
