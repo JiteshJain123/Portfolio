@@ -11,13 +11,10 @@ export const useUI = () => {
 
 export const UIProvider = ({ children }) => {
   const [paletteOpen, setPaletteOpen] = useState(false);
-  const [resumeOpen, setResumeOpen] = useState(false);
 
   const openPalette = useCallback(() => setPaletteOpen(true), []);
   const closePalette = useCallback(() => setPaletteOpen(false), []);
   const togglePalette = useCallback(() => setPaletteOpen((v) => !v), []);
-  const openResume = useCallback(() => setResumeOpen(true), []);
-  const closeResume = useCallback(() => setResumeOpen(false), []);
 
   // Global Cmd/Ctrl+K shortcut.
   useEffect(() => {
@@ -36,9 +33,6 @@ export const UIProvider = ({ children }) => {
     openPalette,
     closePalette,
     togglePalette,
-    resumeOpen,
-    openResume,
-    closeResume,
   };
 
   return <UIContext.Provider value={value}>{children}</UIContext.Provider>;

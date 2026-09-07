@@ -9,7 +9,6 @@ import Skills from "./components/Skills";
 import Achievements from "./components/Achievements";
 import Blog from "./components/Blog";
 import CommandPalette from "./components/CommandPalette";
-import ResumeViewer from "./components/ResumeViewer";
 import AnimatedBackground from "./components/AnimatedBackground";
 import ScrollProgress from "./components/ScrollProgress";
 import { UIProvider } from "./context/UIContext";
@@ -48,7 +47,6 @@ function App() {
 
         {/* Global overlays */}
         <CommandPalette />
-        <ResumeViewer />
       </div>
     </UIProvider>
   );

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Download, FileText, Search, Command } from "lucide-react";
+import { Menu, X, Search, Command } from "lucide-react";
 import { useScrollSpy } from "../hooks/useScrollSpy";
 import { useUI } from "../context/UIContext";
 
@@ -18,7 +18,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const activeId = useScrollSpy(navItems.map((n) => n.id));
-  const { openPalette, openResume } = useUI();
+  const { openPalette } = useUI();
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -85,20 +85,6 @@ const Header = () => {
                 <Command size={9} />K
               </kbd>
             </button>
-            <button
-              onClick={openResume}
-              className="flex items-center gap-1.5 text-gray-300 px-3 py-2 rounded-lg text-sm font-semibold border border-slate-700 hover:border-slate-500 hover:text-white transition-all duration-200"
-            >
-              <FileText size={15} /> Résumé
-            </button>
-            <a
-              href="/Jitesh_Jain_Resume.pdf"
-              download
-              className="flex items-center gap-1.5 border border-blue-500 text-blue-400 px-3 py-2 rounded-lg text-sm font-semibold hover:bg-blue-500 hover:text-white transition-all duration-200 group"
-            >
-              <Download size={15} className="group-hover:translate-y-0.5 transition-transform" />
-              Download
-            </a>
           </div>
 
           {/* Mobile buttons */}
@@ -141,25 +127,6 @@ const Header = () => {
                 </button>
               );
             })}
-            <div className="flex gap-2 pt-2">
-              <button
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  openResume();
-                }}
-                className="flex-1 flex items-center justify-center gap-2 border border-slate-600 text-gray-200 px-4 py-2.5 rounded-lg text-sm font-semibold"
-              >
-                <FileText size={15} /> View
-              </button>
-              <a
-                href="/Jitesh_Jain_Resume.pdf"
-                download
-                className="flex-1 flex items-center justify-center gap-2 border border-blue-500 text-blue-400 px-4 py-2.5 rounded-lg text-sm font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <Download size={15} /> Download
-              </a>
-            </div>
           </div>
         </div>
       </div>

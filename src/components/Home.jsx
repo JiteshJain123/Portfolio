@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { ArrowRight, Github, Linkedin, Mail, MapPin, Download, FileText } from "lucide-react";
-import { useUI } from "../context/UIContext";
+import { ArrowRight, Github, Linkedin, Mail, MapPin } from "lucide-react";
 
 const roles = [
   "Full Stack Software Engineer",
@@ -38,7 +37,6 @@ const useTypewriter = (words, typingSpeed = 80, deletingSpeed = 50, pause = 1500
 
 const Home = () => {
   const typedRole = useTypewriter(roles);
-  const { openResume } = useUI();
 
   const scrollToSection = (id) => {
     const el = document.getElementById(id);
@@ -225,25 +223,6 @@ const Home = () => {
                     </span>
                   ))}
                 </div>
-              </div>
-
-              {/* Resume — view inline or download */}
-              <div className="flex gap-2">
-                <button
-                  onClick={openResume}
-                  className="flex items-center justify-center gap-2 flex-1 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl text-sm font-semibold hover:opacity-90 hover:scale-[1.02] transition-all duration-200 shadow-lg shadow-blue-500/20"
-                >
-                  <FileText size={15} />
-                  View Résumé
-                </button>
-                <a
-                  href="/Jitesh_Jain_Resume.pdf"
-                  download
-                  aria-label="Download résumé"
-                  className="flex items-center justify-center gap-2 px-4 py-3 bg-slate-700/70 border border-slate-600 text-gray-200 rounded-xl text-sm font-semibold hover:border-slate-400 hover:scale-[1.02] transition-all duration-200"
-                >
-                  <Download size={15} />
-                </a>
               </div>
 
               {/* Bottom shimmer line */}

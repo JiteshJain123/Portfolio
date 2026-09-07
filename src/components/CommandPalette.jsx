@@ -9,8 +9,6 @@ import {
   Trophy,
   PenLine,
   Mail,
-  FileText,
-  Download,
   Github,
   Linkedin,
   CornerDownLeft,
@@ -25,7 +23,7 @@ const scrollTo = (id) => {
 };
 
 const CommandPalette = () => {
-  const { paletteOpen, closePalette, openResume } = useUI();
+  const { paletteOpen, closePalette } = useUI();
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
   const inputRef = useRef(null);
@@ -42,24 +40,11 @@ const CommandPalette = () => {
       { group: "Navigate", icon: Trophy, label: "Achievements", hint: "Awards", run: () => scrollTo("achievements") },
       { group: "Navigate", icon: PenLine, label: "Writing", hint: "Blog posts", run: () => scrollTo("writing") },
       { group: "Navigate", icon: Mail, label: "Contact", hint: "Get in touch", run: () => scrollTo("contact") },
-      { group: "Actions", icon: FileText, label: "View Résumé", hint: "Open inline", run: () => openResume() },
-      {
-        group: "Actions",
-        icon: Download,
-        label: "Download Résumé",
-        hint: "PDF",
-        run: () => {
-          const a = document.createElement("a");
-          a.href = "/Jitesh_Jain_Resume.pdf";
-          a.download = "Jitesh_Jain_Resume.pdf";
-          a.click();
-        },
-      },
       { group: "Links", icon: Github, label: "GitHub", hint: "@JiteshJain123", run: () => window.open("https://github.com/JiteshJain123", "_blank") },
       { group: "Links", icon: Linkedin, label: "LinkedIn", hint: "jitesh-jain22", run: () => window.open("https://linkedin.com/in/jitesh-jain22", "_blank") },
       { group: "Links", icon: Mail, label: "Email Me", hint: "jainjitesh2004@gmail.com", run: () => window.open("mailto:jainjitesh2004@gmail.com") },
     ],
-    [openResume]
+    []
   );
 
   const filtered = useMemo(() => {
